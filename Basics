@@ -1,0 +1,23 @@
+//Visualforce Controllers provide a set of instructions for what to do when a user interacts with the page. There are several different types of controllers.
+
+//Standard Controllers - use the default functionality provided by salesforce for working with a single record
+//Standard List Controllers - use the default functionality provided by salesforce for working with a lists of records
+//Custom Controllers - allows developers to use Apex to create their own functionality for a Visualforce page
+//Custom Controller Extensions - allows developers to have a custom controller that inherits some of the functionality from another controller, standard or custom
+//It's important to note that when talking about controllers, Salesforce provides a standard controller for every object - even custom ones. Custom controllers are not just for custom objects. They're used when you need to implement extra functionality that is not present in a standard controller. 
+
+<apex:page standardController="Account" >
+    <h1>
+        Hello from a heading one tag!
+    </h1>
+    <p>
+        Hello from a paragraph tag!
+    </p>
+   
+    <apex:pageBlock>
+    	<apex:pageBlockTable value="{!Account}" var="acc">
+            <apex:column value="{!acc.Id}"></apex:column>apex:colum>
+ 			<apex:column value="{!acc.Name}"></apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
